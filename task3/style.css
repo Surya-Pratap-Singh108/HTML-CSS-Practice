@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height:100%;
+    width: 100%;
+}
+main{
+    padding: 30px;
+   height:100%;
+   width: 100%; 
+   background-color: black;
+   display: grid;
+   grid-gap: 8px;
+   grid-template-columns: 1fr .5fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   grid-template-areas: "div1 div2 div3"
+                        "div1 div4 div6"
+                        "div5 div5 div6"
+   
+   ;
+}
+div{
+    border-radius: 5px;
+}
+#div1{
+    background-image: url(https://images.unsplash.com/photo-1751519953721-e482b58b6e8c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMnx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-color: brown;
+    grid-area: div1;
+}
+#div2{
+    background-image: url(https://images.unsplash.com/photo-1743309425925-72a2e4dbb8a4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-color: rgb(94, 94, 214);
+     grid-area: div2;
+}
+#div3{
+    background-image: url(https://images.unsplash.com/photo-1759738253201-c8a46ef84550?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzOXx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    background-color: rebeccapurple;
+     grid-area: div3;
+}
+#div4{
+    background-image: url(https://plus.unsplash.com/premium_photo-1759772596413-4d73daf3515f?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzN3x8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+
+    background-color: dimgray;
+     grid-area: div4;
+}
+#div5{
+    background-image: url(https://plus.unsplash.com/premium_photo-1759870655417-8f18fc9e766f?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1M3x8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    background-color: darkolivegreen;
+     grid-area: div5;
+}
+#div6{
+    background-image: url(https://plus.unsplash.com/premium_photo-1756824648796-031a2ff9f036?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNXx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-color: darkcyan;
+     grid-area: div6;
+}
