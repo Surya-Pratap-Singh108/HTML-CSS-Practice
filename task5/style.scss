@@ -28,8 +28,8 @@ main{
     width: 100%;
     @include flexcolumn();
     align-items: center;
-    section{
-        padding: 20px;
+    section.view1{
+        padding: 1rem;
         width: 100%;
         @include flexcolumn(1rem);
         .top{
@@ -70,10 +70,106 @@ main{
         
         
     }
+    section.view2{
+        @include flexcolumn(2rem);
+        width: 100%;
+        padding: 1rem;
+        .top,.bottom{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+
+            .element{
+                text-align: center;
+                @include flexcolumn(0.3rem);
+                small{
+                    opacity: 0.5;
+                }
+                h2{
+                    font-size: 3 rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    section.view3{
+        width:100%;
+        padding: 1rem;
+        @include flexcolumn(1rem);
+        .top{
+            width: 100%;
+            img{
+                width: 100%;
+                border-radius: .7rem;
+            }
+        }
+         .bottom{
+            width: 100%;
+            padding: 1rem;
+            background-color:#292929;
+            @include flexcolumn(2rem);
+            border-radius: .7rem;
+            .text{
+                @include flexcolumn(0.8rem);
+                h1{
+                    font-weight: 100;
+                    font-size: 2.8rem;
+                }
+                p{
+                    font-weight: 100;
+                    font-size: 1rem;
+                    opacity: 0.4;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+    section.view4{
+        @include flexcolumn(1rem);
+        gap: 2rem;
+        width: 100%;
+        padding: 1rem;
+        border-radius: .7rem;
+        .card{
+            width: 100%;
+            background-image: url(https://images.unsplash.com/photo-1532074205216-d0e1f4b87368?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500);
+            aspect-ratio: 1/1;
+            background-size: cover;
+            @include flexcolumn(3rem);
+            justify-content: space-between;
+            padding: 1rem;
+            .icon,
+            .bottom{
+               background-color:rgba(187,187,187,.375) ; 
+               backdrop-filter: blur(5px);
+               border: 1px,solid,white;
+               border-radius: .7rem;
+               padding: .5rem;
+            }
+            .top{
+                display: flex;
+                gap: 2rem;
+                justify-content: flex-end;
+                
+            }
+            .icon{
+                width: fit-content;
+                border-radius: 50%;
+            }
+            .bottom{
+                display: flex;
+                justify-content: space-around;
+                padding: 1.5rem 1rem;
+                p{
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
 }
 @media(min-width:900px){
     main{
-        section{
+        section.view1{
             flex-direction: row;
             padding: 1rem 4rem;
             .top,
@@ -86,7 +182,7 @@ main{
                 .text{
                     gap: 1.5rem;
                     h1{
-                        font-size: 3.5rem;
+                        font-size: 3rem;
                     }
                     p{
                         font-size: 1rem;
@@ -95,6 +191,32 @@ main{
                 }
             }
             
+        }
+        section.view2{
+            flex-direction: row;
+        }
+        section.view3{ 
+            flex-direction: row-reverse;
+            padding: 3rem;
+            .top,.bottom{
+                width: 50%;
+            }
+            .bottom{
+                justify-content: space-between;
+                padding: 3rem;
+                .paragraphs{
+                    display: flex;
+                    gap: 2rem;
+                    p{
+                        font-size: 1rem;
+                    }
+                }
+            }
+            
+        }
+        section.view4{
+            flex-direction: row;
+            padding: 1rem 4rem;
         }
     }
 }
